@@ -1,0 +1,18 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
+
+development:
+  <<: *default
+  database: flatstack_test_development
+
+test:
+  <<: *default
+  database: flatstack_test_test
+
+production:
+  <<: *default
+  database: flatstack_test_production
+  username: flatstack_test
+  password: <%= ENV['FLATSTACK_TEST_DATABASE_PASSWORD'] %>
