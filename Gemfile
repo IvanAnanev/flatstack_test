@@ -15,6 +15,9 @@ gem 'slim'
 gem 'bootstrap-sass', '~> 3.3.6'
 gem 'devise'
 gem 'draper', '~> 1.3'
+gem 'fullcalendar-rails'
+gem 'momentjs-rails'
+gem 'fullcalendar-bootstrap-rails'
 
 group :development, :test do
   gem 'byebug'
