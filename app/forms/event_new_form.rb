@@ -40,7 +40,8 @@ class EventNewForm
   private
 
   def persist!
-    raise 1
+    events_builer = EventsBuilder.new(user, name, date, period, end_date)
+    events_builer.build
   end
 
 end
