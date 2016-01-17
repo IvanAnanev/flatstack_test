@@ -4,7 +4,7 @@ nav.navbar.navbar-default
       - if user_signed_in?
         li.dropdown
           a.dropdown-toggle[href='#' data-toggle='dropdown' role='button' aria-haspopup='true' aria-expanded='false']
-            = current_user.name
+            = current_user.full_name
             span.caret
           ul.dropdown-menu
             li

@@ -1,7 +1,7 @@
 class UserDecorator < Draper::Decorator
   delegate_all
 
-  def name
+  def full_name
     object.name.present? ? object.name : object.email
   end
 
