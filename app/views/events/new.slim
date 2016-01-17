@@ -1,0 +1,8 @@
+h2
+  | New event
+= bootstrap_form_for @event_new_form, url: events_path do |f|
+  = f.text_field :name
+  = f.date_field :date
+  = f.select     :period, %w(no_repeat daily weekly monthly yearly)
+  = f.date_field :end_date
+  = f.submit

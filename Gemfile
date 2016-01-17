@@ -17,6 +17,8 @@ gem 'draper', '~> 1.3'
 gem 'fullcalendar-rails'
 gem 'momentjs-rails'
 gem 'fullcalendar-bootstrap-rails'
+gem 'virtus'
+gem 'bootstrap_form'
 
 group :development, :test do
   gem 'byebug'
