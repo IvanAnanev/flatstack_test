@@ -21,6 +21,7 @@ gem 'virtus'
 gem 'bootstrap_form'
 gem 'active_model_serializers', '0.9.0'
 gem 'pundit'
+gem 'rails_12factor'
 
 group :development, :test do
   gem 'byebug'
