@@ -36,6 +36,12 @@ class EventsController < ApplicationController
     end
   end
 
+  def destroy
+    @event = Event.find(params[:id])
+    @event.destroy
+    redirect_to events_path, notice: "event '#{@event.name}' was deleted"
+  end
+
   private
 
   def event_new_form_params

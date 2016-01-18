@@ -4,3 +4,7 @@ h2
   = f.text_field :name
   = f.date_field :date
   = f.submit
+
+h3
+  | Delete Event
+= button_to 'Delete Event', event_path(@event), data: { confirm: 'Are you sure?' }, method: :delete, class: 'btn btn-default'
