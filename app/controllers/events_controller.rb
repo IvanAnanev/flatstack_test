@@ -23,9 +23,26 @@ class EventsController < ApplicationController
     end
   end
 
+  def edit
+    @event = Event.find(params[:id])
+  end
+
+  def update
+    @event = Event.find(params[:id])
+    if @event.update(event_edit_params)
+      redirect_to events_path, notice: "event '#{@event.name}' was updated"
+    else
+      render 'edit'
+    end
+  end
+
   private
 
   def event_new_form_params
     params.require(:event_new_form).permit(:name, :date, :period, :end_date)
+  end
+
+  def event_edit_params
+    params.require(:event).permit(:name, :date)
   end
 end

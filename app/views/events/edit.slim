@@ -1,0 +1,6 @@
+h2
+  | Edit event
+= bootstrap_form_for @event do |f|
+  = f.text_field :name
+  = f.date_field :date
+  = f.submit
