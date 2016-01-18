@@ -1,7 +1,13 @@
 class EventsController < ApplicationController
   before_action :authenticate_user!
 
-  def index; end
+  def index
+    @events = current_user.events
+    respond_to do |format|
+      format.html { render 'events/index'}
+      format.json { render json: ActiveModel::ArraySerializer.new(@events, each_serializer: EventSerializer) }
+    end
+  end
 
   def new
     @event_new_form = EventNewForm.new

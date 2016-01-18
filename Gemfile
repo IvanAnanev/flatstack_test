@@ -19,6 +19,7 @@ gem 'momentjs-rails'
 gem 'fullcalendar-bootstrap-rails'
 gem 'virtus'
 gem 'bootstrap_form'
+gem 'active_model_serializers', '0.9.0'
 
 group :development, :test do
   gem 'byebug'

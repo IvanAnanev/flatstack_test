@@ -18,10 +18,16 @@
 //= require_tree .
 
 $(document).ready(function() {
-
     // page is now ready, initialize the calendar...
 
     $('#calendar').fullCalendar({
+        firstDay: 1,
+        eventSources: [
+            {
+                url: '/events',
+                type: 'GET'
+            }
+        ]
         // put your options and callbacks here
     })
 
