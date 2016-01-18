@@ -25,10 +25,12 @@ class EventsController < ApplicationController
 
   def edit
     @event = Event.find(params[:id])
+    authorize @event
   end
 
   def update
     @event = Event.find(params[:id])
+    authorize @event
     if @event.update(event_edit_params)
       redirect_to events_path, notice: "event '#{@event.name}' was updated"
     else
@@ -38,6 +40,7 @@ class EventsController < ApplicationController
 
   def destroy
     @event = Event.find(params[:id])
+    authorize @event
     @event.destroy
     redirect_to events_path, notice: "event '#{@event.name}' was deleted"
   end
